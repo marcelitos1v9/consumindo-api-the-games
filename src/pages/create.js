@@ -1,13 +1,12 @@
 import Image from "next/image";
 import localFont from "next/font/local";
 import List from "@/components/Listgames";
-import Header from "@/components/Header";
+import CreateGame from "@/components/Create";
 
 export default function Home() {
   return (
     <>
-      <Header/>
-      <List/>
+    <CreateGame/>
     </>
   );
 }
