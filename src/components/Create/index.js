@@ -38,34 +38,34 @@ const CreateGame = () => {
     return (
         <div className="p-8 bg-gradient-to-r from-blue-500 to-purple-600 min-h-screen flex items-center justify-center">
             <div className="bg-white rounded-lg shadow-lg p-6 w-full max-w-md">
-                <h2 className="text-2xl font-bold text-center text-gray-800">Cadastrar novo jogo</h2>
+                <h2 className="text-3xl font-extrabold text-center text-gray-800 mb-4">Cadastrar Novo Jogo</h2>
                 <form onSubmit={handleSubmit} className="mt-4">
                     <div>
-                        <label htmlFor="gameName" className="block text-gray-700">Nome do Jogo:</label>
-                        <input type="text" id="gameName" name="title" className="mt-1 block w-full border border-gray-300 rounded-md p-2" required onChange={(e) => setTitle(e.target.value)} />
+                        <label htmlFor="gameName" className="block text-gray-700 font-semibold">Nome do Jogo:</label>
+                        <input type="text" id="gameName" name="title" className="mt-1 block w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500" required onChange={(e) => setTitle(e.target.value)} />
                     </div>
                     <div className="mt-4">
-                        <label htmlFor="year" className="block text-gray-700">Ano:</label>
-                        <input type="number" name="year" id="year" className="mt-1 block w-full border border-gray-300 rounded-md p-2" required onChange={(e) => setYear(e.target.value)} />
+                        <label htmlFor="year" className="block text-gray-700 font-semibold">Ano:</label>
+                        <input type="number" name="year" id="year" className="mt-1 block w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500" required onChange={(e) => setYear(e.target.value)} />
                     </div>
                     <div className="mt-4">
-                        <label htmlFor="price" className="block text-gray-700">Preço:</label>
-                        <input type="number" name="price" id="price" className="mt-1 block w-full border border-gray-300 rounded-md p-2" step="0.01" required onChange={(e) => setPrice(e.target.value)} />
+                        <label htmlFor="price" className="block text-gray-700 font-semibold">Preço:</label>
+                        <input type="number" name="price" id="price" className="mt-1 block w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500" step="0.01" required onChange={(e) => setPrice(e.target.value)} />
                     </div>
                     <h3 className="mt-4 text-lg font-bold">Descrições:</h3>
                     {descriptions.map((desc, index) => (
-                        <div key={index} className="mt-2 border border-gray-300 p-4 rounded">
+                        <div key={index} className="mt-2 border border-gray-300 p-4 rounded-lg shadow-sm">
                             <div>
-                                <label className="block text-gray-700">Gênero:</label>
-                                <input type="text" className="mt-1 block w-full border border-gray-300 rounded-md p-2" onChange={(e) => handleDescriptionChange(index, 'genre', e.target.value)} />
+                                <label className="block text-gray-700 font-semibold">Gênero:</label>
+                                <input type="text" className="mt-1 block w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500" onChange={(e) => handleDescriptionChange(index, 'genre', e.target.value)} />
                             </div>
                             <div className="mt-2">
-                                <label className="block text-gray-700">Plataforma:</label>
-                                <input type="text" className="mt-1 block w-full border border-gray-300 rounded-md p-2" onChange={(e) => handleDescriptionChange(index, 'platform', e.target.value)} />
+                                <label className="block text-gray-700 font-semibold">Plataforma:</label>
+                                <input type="text" className="mt-1 block w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500" onChange={(e) => handleDescriptionChange(index, 'platform', e.target.value)} />
                             </div>
                             <div className="mt-2">
-                                <label className="block text-gray-700">Classificação:</label>
-                                <input type="text" className="mt-1 block w-full border border-gray-300 rounded-md p-2" onChange={(e) => handleDescriptionChange(index, 'rating', e.target.value)} />
+                                <label className="block text-gray-700 font-semibold">Classificação:</label>
+                                <input type="text" className="mt-1 block w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500" onChange={(e) => handleDescriptionChange(index, 'rating', e.target.value)} />
                             </div>
                         </div>
                     ))}
